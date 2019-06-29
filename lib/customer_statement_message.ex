@@ -51,7 +51,7 @@ defmodule MT940.CustomerStatementMessage do
       %StatementLineInformation{} -> true
       _ -> false
     end)
-    |> Enum.chunk(2)
+    |> Enum.chunk_every(2)
     |> Enum.map(&StatementLineBundle.new(Enum.at(&1, 0), Enum.at(&1, 1)))
 
     closing_balance = lines

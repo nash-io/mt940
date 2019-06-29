@@ -70,7 +70,7 @@ defmodule MT940.Parser do
     when is_binary(raw) and is_binary(line_separator) do
 
     messages = raw
-    |> String.strip
+    |> String.trim()
     |> String.split(Regex.compile!("#{line_separator}-(#{line_separator}|$)"), trim: true)
     |> Enum.map(&parse_message(&1, line_separator))
 
