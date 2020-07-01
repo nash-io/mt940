@@ -90,7 +90,7 @@ defmodule MT940.Parser do
 
     parts = "#{line_separator}(?!#{tag})"
     |> Regex.compile!
-    |> Regex.replace(raw, "")
+    |> Regex.replace(raw, ",")
 
     parts = "#{line_separator}"
     |> Regex.compile!
