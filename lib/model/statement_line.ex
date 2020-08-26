@@ -42,7 +42,7 @@ defmodule MT940.StatementLine do
     reference  = matches |> Enum.at(5)
     transaction_description = case matches |> Enum.at(6) do
       "" -> nil
-      _  -> matches |> Enum.at(6)
+      value  -> value
     end
 
     %__MODULE__{result |
