@@ -4,7 +4,7 @@ defmodule Mt940.Mixfile do
   def project do
     [
       app: :mt940,
-      version: "1.1.5",
+      version: "1.2.0",
       elixir: "~> 1.9",
       description: "MT940/MT942 parser for Elixir.",
       package: package(),
